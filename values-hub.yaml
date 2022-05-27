@@ -121,6 +121,19 @@ clusterGroup:
     project: config-demo
     path: charts/all/config-demo
 
+<<<<<<< Updated upstream
+=======
+  - name: acs-integrations
+    namespace: stackrox
+    project: hub
+    path: charts/hub/acs
+
+  - name: prometheus
+    namespace: openshift-moinitoring
+    project: hub
+    path: charts/hub/prometheus
+    
+>>>>>>> Stashed changes
   managedClusterGroups:
   - name: secured
     helmOverrides:

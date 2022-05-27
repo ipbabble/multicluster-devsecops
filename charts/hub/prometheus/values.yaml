@@ -1,0 +1,3 @@
+storage:
+  type: local-storage
+  size: 40Gi
