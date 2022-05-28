@@ -8,7 +8,7 @@ data:
     prometheusK8s:
       volumeClaimTemplate:
         spec:
-          storageClassName: {{ Values.storage.type }}
+          storageClassName: {{ .Values.storage.type }}
           resources:
             requests:
-              storage: {{ Values.storage.size }}
+              storage: {{ .Values.storage.size }}
