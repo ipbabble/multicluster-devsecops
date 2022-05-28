@@ -131,6 +131,11 @@ clusterGroup:
     project: hub
     path: charts/hub/acs
 
+  - name: prometheus
+    namespace: openshift-moinitoring
+    project: hub
+    path: charts/hub/prometheus
+
   managedClusterGroups:
   - name: secured
     helmOverrides:
