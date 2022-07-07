@@ -32,6 +32,12 @@ clusterGroup:
     channel: stable-3.7
     csv: quay-bridge-operator.v3.7
 
+  - name: mongodb-operator
+    namespace: openshift-operators
+    channel: alpha
+    csv: mongodb-operator.v0.3.0
+
+
   projects:
     - secured
     - ci
@@ -57,6 +63,11 @@ clusterGroup:
     namespace: config-demo
     project: test-app
     path: charts/all/config-demo
+
+  - name: mongodb
+    namespace: openshift-operators
+    project: test-app
+    path: charts/region/mongodb
 
 #  To have apps in multiple flavors, use namespaces and use helm overrides as appropriate
 #
