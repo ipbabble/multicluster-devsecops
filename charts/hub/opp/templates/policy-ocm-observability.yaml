@@ -19,6 +19,8 @@ spec:
       kind: ConfigurationPolicy
       metadata:
         name: policy-ocm-observability
+        annotations:
+          argocd.argoproj.io/compare-options: IgnoreExtraneous
       spec:
         object-templates:
         - complianceType: musthave
@@ -28,8 +30,6 @@ spec:
             metadata:
               name: thanos-object-storage
               namespace: open-cluster-management-observability
-              annotations:
-                argocd.argoproj.io/compare-options: IgnoreExtraneous
             stringData:
               thanos.yaml: |
                 type: s3
