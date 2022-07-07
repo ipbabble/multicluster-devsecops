@@ -35,7 +35,6 @@ spec:
                 type: s3
                 config:
                   bucket: '{{ `{{ (lookup "objectbucket.io/v1alpha1" "ObjectBucket" "" "obc-quay-enterprise-quay-registry-quay-datastore").spec.endpoint.bucketName }}` }}'
-#                  endpoint: '{{ `{{ (lookup "objectbucket.io/v1alpha1" "ObjectBucket" "" "obc-quay-enterprise=quay-registry-quay-datastore").spec.endpoint.bucketHost }}` }}'
                   endpoint: s3.openshift-storage.svc
                   insecure: true
                   access_key: '{{ `{{ (lookup "v1" "Secret" "openshift-storage" "noobaa-admin").data.AWS_ACCESS_KEY_ID }}` }}'
