@@ -33,7 +33,7 @@ clusterGroup:
     csv: quay-bridge-operator.v3.7
 
   - name: mongodb-operator
-    namespace: openshift-operators
+#    namespace: openshift-operators
     channel: alpha
     csv: mongodb-operator.v0.3.0
 
