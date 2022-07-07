@@ -69,6 +69,10 @@ clusterGroup:
     project: test-app
     path: charts/region/mongodb
 
+mongodb:
+  size: 1Gi
+  class: gp2
+  
 #  To have apps in multiple flavors, use namespaces and use helm overrides as appropriate
 #
 #  - name: pipelines
