@@ -2,7 +2,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: containers-pvc
-  namespace: {{ .Values.global.devel.namespace }}  
+  namespace: {{ .Values.devel.namespace }}  
 spec:
   resources:
     requests:
