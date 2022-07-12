@@ -21,6 +21,7 @@ global:
 devel:
   appURL: AUTOMATED
   image: AUTOMATED
+  namespace: devsecops-ci
   
 clusterGroup:
   name: testgroup
