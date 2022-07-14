@@ -1,0 +1,6 @@
+apiVersion: v2
+description: A Helm chart to turn on a specific feature set for the cluster
+keywords:
+- pattern
+name: featureset-enable
+version: 0.0.1

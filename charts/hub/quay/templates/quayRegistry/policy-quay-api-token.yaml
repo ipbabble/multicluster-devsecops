@@ -36,6 +36,16 @@ spec:
                 apiVersion: v1
                 data:
                   token: '{{ `{{hub fromSecret "openshift-operators" "quay-integration" "token" hub}}` }}'
+            - complianceType: mustonlyhave
+              objectDefinition:
+                kind: Secret
+                type: Opaque
+                metadata:
+                  name: quay-shared-token
+                  namespace: {{ .Values.devel.namespace }}
+                apiVersion: v1
+                quay-shared-token: '{{ `{{ (lookup "sharedresource.openshift.io" "SharedSecret" "" "quay-shared-token") }}` }}'
+
 ---
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
