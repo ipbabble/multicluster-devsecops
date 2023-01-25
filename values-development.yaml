@@ -66,6 +66,7 @@ clusterGroup:
 #Adding jchraibi #advanced-devsecops to pattern framework
     - spring-petclinic
     - rollouts
+    - developer
 
   applications:
     acs-secured:
@@ -166,15 +167,31 @@ clusterGroup:
 #    repoURL: https://github.com/you/applications.git
 #    targetRevision: main
 
-backstage:
-  extraEnvVars:
-    - name: 'APP_CONFIG_app_baseUrl'
-      value: 'http://{{ .Values.ingress.host }}:7007'
-    - name: 'APP_CONFIG_backend_baseUrl'
-      value: 'http://{{ .Values.ingress.host }}:7007'
-    - name: 'APP_CONFIG_backend_cors_origin'
-      value: 'http://{{ .Values.ingress.host }}:7007`'
- 
-ingress:
-  enabled: false
-  host: wh-devel-bs.blueprints.rhecoeng.com
+    vault:
+      name: vault
+      namespace: vault
+      project: hub
+      chart: vault
+      repoURL: https://helm.releases.hashicorp.com
+      targetRevision: v0.20.0
+      overrides:
+      - name: global.openshift
+        value: "true"
+      - name: injector.enabled
+        value: "false"
+
+    backstage:
+      name: backstage
+      namespace: backstage
+      project: developer
+      chart: backstage
+      repoURL: https://backstage.github.io/charts
+      path: charts/region/backstage
+
+    bitnami:
+      name: bitnami
+      namespace: backspace
+      project: developer
+      chart: biotnami
+      repoURL: https://charts.bitnami.com/bitnami
+
