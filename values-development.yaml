@@ -194,9 +194,9 @@ clusterGroup:
       repoURL: https://backstage.github.io/charts
       targetRevision: 0.14.0
       overrides:
-        - name: 'extraEnvVars.APP_CONFIG_app_baseUrl'
+        - name: 'backstage.extraEnvVars.APP_CONFIG_app_baseUrl'
           value: 'http://backstage.backstage.svc.cluster.local:7007'
-        - name: 'extraEnvVars.APP_CONFIG_backend_baseUrl'
+        - name: 'backstage.extraEnvVars.APP_CONFIG_backend_baseUrl'
           value: 'http://backstage.backstage.svc.cluster.local:7007'
-        - name: 'extraEnvVars.APP_CONFIG_backend_cors_origin'
+        - name: 'backstage.extraEnvVars.APP_CONFIG_backend_cors_origin'
           value: 'http://backstage.backstage.svc.cluster.local:7007'
