@@ -140,11 +140,11 @@ clusterGroup:
       project: ci
       path: charts/region/roxctl
 
-    janus:
-      name: janus
-      namespace: backstage
-      project: developer
-      path: charts/region/backstage
+#    janus:
+#      name: janus
+#      namespace: backstage
+#      project: developer
+#      path: charts/region/backstage
 
 #Adding jchraibi #advanced-devsecops to pattern framework
     staging-spring-petclinic:
@@ -192,11 +192,12 @@ clusterGroup:
       project: developer
       chart: backstage
       repoURL: https://backstage.github.io/charts
+      targetRevision: 0.14.0
 
-    bitnami:
-      name: bitnami
-      namespace: backspace
-      project: developer
-      chart: biotnami
-      repoURL: https://charts.bitnami.com/bitnami
-
+#    bitnami:
+#      name: bitnami
+#      namespace: backspace
+#      project: developer
+#      chart: biotnami
+#      repoURL: https://charts.bitnami.com/bitnami
+#      targetRevision: 
