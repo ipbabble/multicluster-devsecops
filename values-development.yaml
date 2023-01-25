@@ -140,6 +140,12 @@ clusterGroup:
       project: ci
       path: charts/region/roxctl
 
+    janus:
+      name: janus
+      namespace: backstage
+      project: developer
+      path: charts/region/backstage
+
 #Adding jchraibi #advanced-devsecops to pattern framework
     staging-spring-petclinic:
       name: staging-spring-petclinic
@@ -186,7 +192,6 @@ clusterGroup:
       project: developer
       chart: backstage
       repoURL: https://backstage.github.io/charts
-      path: charts/region/backstage
 
     bitnami:
       name: bitnami
