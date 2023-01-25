@@ -41,6 +41,7 @@ clusterGroup:
     - devsecops-ci
     - devsecops-dev
     - devsecops-qa
+    - backstage  # added for backstage
 
   subscriptions:
     rhacs-operator:
@@ -164,3 +165,16 @@ clusterGroup:
 #    path: applications/pipeline
 #    repoURL: https://github.com/you/applications.git
 #    targetRevision: main
+
+backstage:
+  extraEnvVars:
+    - name: 'APP_CONFIG_app_baseUrl'
+      value: 'http://{{ .Values.ingress.host }}:7007'
+    - name: 'APP_CONFIG_backend_baseUrl'
+      value: 'http://{{ .Values.ingress.host }}:7007'
+    - name: 'APP_CONFIG_backend_cors_origin'
+      value: 'http://{{ .Values.ingress.host }}:7007`'
+ 
+ingress:
+  enabled: false
+  host: wh-devel-bs.blueprints.rhecoeng.com
