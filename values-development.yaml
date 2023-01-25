@@ -196,9 +196,9 @@ clusterGroup:
       overrides:
         - name: backstage.extraEnvVars
           value: |
-            [- name: APP_CONFIG_app_baseUrl 
-               value: http://backstage.backstage.svc.cluster.local:7007' 
-             - name: APP_CONFIG_backend_baseUrl
-               value: 'http://backstage.backstage.svc.cluster.local:7007'
-             - name: APP_CONFIG_backend_cors_origin 
-               value: 'http://backstage.backstage.svc.cluster.local:7007']
+            ["- name: APP_CONFIG_app_baseUrl", 
+             "value: http://backstage.backstage.svc.cluster.local:7007'", 
+             "- name: APP_CONFIG_backend_baseUrl",
+             "value: 'http://backstage.backstage.svc.cluster.local:7007'",
+             "- name: APP_CONFIG_backend_cors_origin",
+             "value: 'http://backstage.backstage.svc.cluster.local:7007'"]
