@@ -206,6 +206,8 @@ clusterGroup:
           value: APP_CONFIG_backend_cors_origin
         - name: backstage.extraEnvVars[2].value
           value: http://backstage.backstage.svc.cluster.local:7008
+        - name: ingress.host
+          value: backstage.backstage.svc.cluster.local
 
     bitnami:
       name: bitnami
